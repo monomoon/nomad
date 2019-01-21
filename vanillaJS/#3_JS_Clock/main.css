@@ -1,0 +1,40 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    background: url(/cyberPunkBG.jpg) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  
+  .btn {
+    cursor: pointer;
+  }
+  
+  h1 {
+    color: #06dfcd;
+    transition: color 0.5s ease-in-out;
+    font-size: 100px;
+  }
+  .js-clock{
+    position: absolute;
+    left: 40%;
+    top: 35%;
+    display: inline-block;
+    line-height: 100px;
+    
+  }
+  .js-form{
+    
+    display: flex;
+    
+    border: 0px solid blue;
+    
+  }
+  .clicked {
+    color: #7f8c8d;
+  }
