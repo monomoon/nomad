@@ -1,40 +1,114 @@
 *{
   margin: 0;
   padding: 0;
-}
+  font-family: 'Orbitron','Noto Sans KR', sans-serif; 
+  /* font-family: 'Poiret One', cursive;  */
+  /* font-family: 'Monoton', cursive; */
+  /* font-family: 'Audiowide', cursive; */
+  font-weight: 100;} 
 
-body {
-    background: url(/cyberPunkBG.jpg) no-repeat;
+
+ .bgImage{
+    
+    position: absolute;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-  }
+    left: 0;
+    top: 0;
+    max-width: 100%;
+    min-height: 100%;
+    margin: auto;
+    z-index: -1;
+    
+    }
   
   .btn {
     cursor: pointer;
   }
   
   h1 {
-    color: #06dfcd;
+    color: #ffffff;
     transition: color 0.5s ease-in-out;
     font-size: 100px;
   }
-  .js-clock{
-    position: absolute;
-    left: 40%;
-    top: 35%;
-    display: inline-block;
-    line-height: 100px;
+  .js-date{
+    display: flex;
+    justify-content: center;
     
   }
-  .js-form{
-    
+  .js-clock{
     display: flex;
+    justify-content: center;
+    height: 80%;
+    align-items: flex-end;
+  }
+  .js-form, .js-toDoForm{
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    margin: 20px;
+   
+  }
+  .form,
+  .greetings{
+    display: none;
+  }
+  
+
+  .js-form input, .js-toDoForm input{
     
-    border: 0px solid blue;
+    background-color: black;
+    color: #ffffff;
+    height: 30px;
+    display: flex;
+    justify-content: center;
     
+  }
+  .js-toDoList li button{
+      all: unset; 
+      padding: 0px;
+      width: 25px;
+      height: 25px;
+      border-radius: 15px;
+      margin-left: 10px;
+      background: rgb(192, 16, 16);
+      text-align: center;
+  }
+.js-toDoList li{
+  color :  #ffffff;
+    display: flex;
+    justify-content: center; 
+    font-size: 20px;
+    padding: 10px;
+}
+  .js-greetings{
+    color :  #ffffff;
+    display: flex;
+    justify-content: center;
+
   }
   .clicked {
     color: #7f8c8d;
+  }
+  .showing {
+    display: flex;
+    justify-content: center;
+  }
+
+  .js-dateWeather {
+    color: #ffffff;
+    height: inline-block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+
+  .js-audio img{
+    height: 30px;
+    float: right;
+    position: absolute;
+    top: 20px;
+    right: 20px;
   }
