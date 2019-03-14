@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Audiowide|Monoton|Noto+Sans+KR|Orbitron|Poiret+One" rel="stylesheet">
+    <title>MainPage</title>
+</head>
+<body>
+        
+        <div class="js-dateWeather">
+            <h2></h2> 
+            <img src="">
+            <p></p>
+            <h3></h3>            
+        </div>
+        <div class="js-audio">
+            <h2 class="volumeText"></h2>
+            <input class="volControl" type="range" min="0" max="100" value="50" step="1"  ></input>
+
+            <button type="button" class="soundBtn"></button>
+        </div>
+        <div class="js-clock">
+            <h1>00:00</h1>
+        </div>
+        
+        <form class="js-form form">
+            <input type="text" placeholder="what is your name">
+        </form>
+
+        <h2 class="js-greetings greetings"></h2>
+
+        <form class="js-toDoForm">
+            <input type="text" placeholder="what are you planning">
+        </form>
+
+        <ul class="js-toDoList">
+             <!--  js로 todo 리스트를 하나씩 생성 -->
+        </ul>
+        
+        <audio src="#" autoplay="true", loop="true"></audio>
+        
+        
+    
+    <script src="./clock.js"></script>
+    <script src="./greeting.js"></script>
+    <script src="./todo.js"></script>
+    <script src="./bg.js"></script>
+    <script src="./audio.js"></script>
+    <script src="./weather.js"></script>
+
+</body>
+</html>

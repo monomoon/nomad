@@ -1,0 +1,182 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron','Noto Sans KR', sans-serif; 
+  /* font-family: 'Poiret One', cursive;  */
+  /* font-family: 'Monoton', cursive; */
+  /* font-family: 'Audiowide', cursive; */
+  font-weight: 100;} 
+  
+  body{
+   margin: 0;
+   -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+    .bgImage{
+    display: flex;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    left: 0;
+    top: 0;
+    width: 99%;
+    max-width: 100%;
+    min-height: 100%;
+    margin: auto;
+    z-index: -1;
+    
+    }
+  
+  .btn {
+    cursor: pointer;
+  }
+  
+/* 시계 */
+  h1 {
+    color: #ffffff;
+    transition: color 0.5s ease-in-out;
+    font-size: 100px;
+  }
+  .js-clock{
+    display: flex;
+    justify-content: center;
+    height: 50%;
+    align-items: flex-end;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  /* todo list */
+  .js-form, .js-toDoForm{
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    margin: 20px;
+    overflow: hidden;
+   
+  }
+  .form,
+  .greetings{
+    display: none;
+  }
+
+  .js-form input, .js-toDoForm input{
+    
+    background-color: black;
+    color: #ffffff;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    
+  }
+  .clicked {
+    color: #7f8c8d;
+  }
+  
+  .showing {
+    display: flex;
+    justify-content: center;
+  }
+  .js-toDoList li button{
+      all: unset; 
+      padding: 0px;
+      width: 25px;
+      height: 25px;
+      border-radius: 15px;
+      margin-left: 10px;
+      background: rgb(255, 1, 1);
+      opacity: 0.5;
+      text-align: center;
+  }
+.js-toDoList li{
+  color :  #ffffff;
+    display: flex;
+    justify-content: center; 
+    font-size: 20px;
+    padding: 10px;
+}
+
+  .js-greetings{
+    color :  #ffffff;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+
+  }
+  
+/* date weather */
+  .js-date{
+    display: flex;
+    justify-content: center;  
+  }
+  .js-dateWeather {
+    overflow: hidden;
+    color: #ffffff;
+    opacity: 0.7;
+    height: inline-block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  .js-dateWeather p{
+    font-size: 30px;
+    float: left;
+  }
+  .js-dateWeather p span{
+    font-size: 16px;
+  }
+
+  .js-dateWeather img{  
+    height: 100px;
+    float: left;
+    
+      }
+
+  /* sound & volume */
+  .js-audio{
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px;
+
+  }
+  .volControl{
+    all: unset;
+    margin-right: 15px;
+    }
+
+  .volControl::-webkit-slider-runnable-track{
+   margin: 8px 0 8px 0;
+    height: 3px;
+   width: 100%; 
+   background-color: #ffffff;
+   opacity: 0.4;
+  }
+  .volControl::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    margin-top: -5px;
+    height: 15px;
+    width: 15px;
+    border-radius: 15px;
+    background-color: #888888;
+    opacity: 1;
+    box-shadow: 3px 3px 1px #080808;
+  }
+  .soundBtn{
+    all: unset;
+    width: 30px;
+    height: 30px;
+    background: url("./images/pause.svg") no-repeat;
+    background-size: cover;  
+    
+  }
+  .volumeText{
+    margin: 5px 10px 0 0;
+    font-size: 15px;
+    color: #ffffff;
+    opacity: 0.5;
+  }
