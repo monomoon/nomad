@@ -31,7 +31,7 @@ function paintImage(imgNumber) {
   }else{
     body.style.backgroundImage = "url(images/9.jpg)";
    }
-  
+
     }
 
 function genRandom() {

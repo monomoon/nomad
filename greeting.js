@@ -54,4 +54,5 @@ function init() {
     loadName(); // 페이지가 열리면 로드네임을 실행
 }
 
+
 init();
