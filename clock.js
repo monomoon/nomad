@@ -26,6 +26,5 @@ function init() {
 init();
 
 // setInterval(fn, 1000) 
-
 // function sayHi() {console.log("hi")} // sayhi라는 함수 생성
 // setInterval(sayHi, 1000) // sayHi 함수를 1초마다 실행하는것

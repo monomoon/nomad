@@ -18,7 +18,6 @@ function getWeather(lat, lon){
         const place = json.name;
         
         wtemperture.innerHTML=`<span>${place}</span><br>  ${json.main.temp}℃`
-        
         weatherText.innerText= ` ${currentWeather}`;
         
         //아이콘

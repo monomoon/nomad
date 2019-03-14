@@ -8,8 +8,10 @@ bgSound.volume = 0.5;
 function playPause(){
     if(bgSound.paused){
         bgSound.play();
+        soundBtn.style.backgroundImage =`url(images/pause.png)`;
     }else{
         bgSound.pause();
+        soundBtn.style.backgroundImage =`url(images/start.png)`;
         
     }
 }

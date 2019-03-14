@@ -28,7 +28,16 @@ function askForName() { // 폼을 화면에 보여주고 인풋 텍스트 값으
 function paintGreeting(text) { // loadName에서 currentUser가 있다면.. css 클래스 조정으로 화면에 보이거나 안보이게 그리고 h4에 텍스트값을 넣는다.
     form.classList.remove(SHOWING_CN);
     greeting.classList.add(SHOWING_CN);
-    greeting.innerText = `Hello ${text}`;
+    const date = new Date();
+    const hours = date.getHours();
+    
+    if(hours>=6 && hours<=11) {
+        greeting.innerText = `Good morning ${text}`
+    }else if(hours >=12 && hours <= 17){
+        greeting.innerText = `Good afternoon ${text}`;
+    }else if(hours >=18 && hours <= 24){
+        greeting.innerText = `Good night ${text}`;
+    }
 }
 
 function loadName() { // 로컬저장소에 currentUser가 있는지 파악하고 없다면 그 값을 요구 있다면 출력
