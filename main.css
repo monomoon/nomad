@@ -16,7 +16,7 @@
     background-position: center center;
     background-repeat: no-repeat;
   }
-    .bgImage{
+    /* .bgImage{
     display: flex;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -30,7 +30,7 @@
     margin: auto;
     z-index: -1;
     
-    }
+    } */
   
   .btn {
     cursor: pointer;
@@ -106,7 +106,6 @@
     display: flex;
     justify-content: center;
     overflow: hidden;
-
   }
   
 /* date weather */
@@ -182,4 +181,33 @@
     opacity: 0.5;
   }
 
-  
+  @media (max-width: 959px) {
+    h1 {
+      color: #ffffff;
+      transition: color 0.5s ease-in-out;
+      font-size: 5vh;
+    }
+    .js-clock{
+      display: flex;
+      justify-content: center;
+      height: 45%;
+      align-items: flex-end;
+      margin: 0;
+      overflow: hidden;
+    }
+    .js-dateWeather {
+      color: #ffffff;
+      opacity: 0.7;
+      position: absolute;
+      top:20%;
+      left: 38%;
+      
+    }
+    .js-dateWeather h2{
+     font-size: 20px; 
+    }
+    .js-dateWeather p{
+      font-size: 30px;
+      
+    }
+  }
