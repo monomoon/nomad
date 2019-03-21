@@ -17,14 +17,18 @@ function deleteToDo(event){
     saveToDos();
 }
 function doneToDo(event){
-  const btn =event.target;
-  const spanText = btn.previousSibling;
+  const checkBox =event.target;
+  const spanText = checkBox.nextSibling;
+  
   if(spanText.classList != "toDoDone"){
     spanText.classList.add("toDoDone")
+    
+    saveToDos();
   } else {
     spanText.classList.remove("toDoDone")
   };
-  
+
+  saveToDos();
 }
 
 function saveToDos(){
@@ -34,27 +38,29 @@ function saveToDos(){
 }
   
 function paintToDo(text) {
+    const newId = toDos.length + 1;  
     const li = document.createElement("li");
-    const doneBtn = document.createElement("button");
+    const doneBtn = document.createElement("input");
+    doneBtn.type = "checkbox";
+    doneBtn.id=(newId);
+    const label = document.createElement("label");
+    label.setAttribute("for","doneCheckBox");
     const delBtn = document.createElement("button");
-    const span = document.createElement("span");
-    const newId = toDos.length + 1;
-    
-    doneBtn.innerText = "V"
-    doneBtn.addEventListener("click", doneToDo);
+  
+    doneBtn.addEventListener("change", doneToDo);
     delBtn.innerText = "X";
     delBtn.addEventListener("click", deleteToDo);
-    span.innerText = text;
+    label.innerText = text;
     
-    li.appendChild(span);
     li.appendChild(doneBtn);
+    li.appendChild(label);
     li.appendChild(delBtn);
     
     li.id = newId;
     toDoList.appendChild(li);
     const toDoObj = { 
         text: text,
-        id: newId
+        id: newId,
     };
     toDos.push(toDoObj); //push?
     saveToDos();
@@ -63,10 +69,13 @@ function paintToDo(text) {
   function handleSubmit(event) {
     event.preventDefault();
     const currentValue = toDoInput.value;
+    if(currentValue == ""){
+      
+    }else{
     paintToDo(currentValue);
+    }
     toDoInput.value = "";
   }
-
 
 function loadToDos() {
     const toDos = localStorage.getItem(TODOS_LS);

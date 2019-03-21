@@ -74,8 +74,28 @@
     color: #808080;
     text-decoration: line-through;
   }
+
+  .js-toDoList li input[type="checkbox"]{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 4px;
+    margin-right: 5px;
+  }
+
+  .js-todoList li input[type="checkbox"] + label{
+    margin-right: 15px;
+    cursor: pointer;
+    
+  }
+  .js-todoList li input[type="checkbox"] + label{
+    margin-right: 15px;
+    cursor: pointer;
+    
+  }
   
-  .js-toDoList li button{
+
+ .js-toDoList li button{
       all: unset; 
       padding: 0px;
       width: 25px;
