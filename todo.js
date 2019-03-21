@@ -8,7 +8,7 @@ let toDos = [];
 
 function deleteToDo(event){
     const btn = event.target;
-    const li = btn.parentNode;  //parentNode
+    const li = btn.parentNode;  
     toDoList.removeChild(li);
     const cleanToDos = toDos.filter(function(toDos){
         return toDos.id !== parseInt(li.id);
@@ -18,8 +18,13 @@ function deleteToDo(event){
 }
 function doneToDo(event){
   const btn =event.target;
-  const li = btn.parentNode;
-  li.style.textDecorationLine("line-through;");
+  const spanText = btn.previousSibling;
+  if(spanText.classList != "toDoDone"){
+    spanText.classList.add("toDoDone")
+  } else {
+    spanText.classList.remove("toDoDone")
+  };
+  saveToDos();
 }
 
 function saveToDos(){

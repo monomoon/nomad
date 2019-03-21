@@ -16,21 +16,6 @@
     background-position: center center;
     background-repeat: no-repeat;
   }
-    /* .bgImage{
-    display: flex;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    left: 0;
-    top: 0;
-    width: 99%;
-    max-width: 100%;
-    min-height: 100%;
-    margin: auto;
-    z-index: -1;
-    
-    } */
   
   .btn {
     cursor: pointer;
@@ -41,6 +26,7 @@
     color: #ffffff;
     transition: color 0.5s ease-in-out;
     font-size: 100px;
+    
   }
   .js-clock{
     display: flex;
@@ -48,7 +34,7 @@
     height: 50%;
     align-items: flex-end;
     margin: 0;
-    overflow: hidden;
+    
   }
 
   /* todo list */
@@ -57,9 +43,10 @@
     flex-direction:column;
     align-items:center;
     margin: 20px;
-    overflow: hidden;
+    
    
   }
+  
   .form,
   .greetings{
     display: none;
@@ -82,6 +69,12 @@
     display: flex;
     justify-content: center;
   }
+
+  .toDoDone{
+    color: #808080;
+    text-decoration: line-through;
+  }
+  
   .js-toDoList li button{
       all: unset; 
       padding: 0px;
@@ -105,7 +98,7 @@
     color :  #ffffff;
     display: flex;
     justify-content: center;
-    overflow: hidden;
+    
   }
   
 /* date weather */
@@ -114,7 +107,7 @@
     justify-content: center;  
   }
   .js-dateWeather {
-    overflow: hidden;
+    
     color: #ffffff;
     opacity: 0.7;
     height: inline-block;
@@ -193,20 +186,12 @@
       height: 45%;
       align-items: flex-end;
       margin: 0;
-      overflow: hidden;
-    }
-    .js-dateWeather {
-      color: #ffffff;
-      opacity: 0.7;
-      position: absolute;
-      top:20%;
-      left: 38%;
       
     }
-    .js-dateWeather h2{
-     font-size: 20px; 
+    .js-dateWeather {
+      position: absolute;
+      top: 25%;
+      left: 50%;
+      margin-left:-108.4px;
+      
     }
-    .js-dateWeather p{
-      font-size: 25px;
-    }
-  }
