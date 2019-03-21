@@ -24,7 +24,7 @@ function doneToDo(event){
   } else {
     spanText.classList.remove("toDoDone")
   };
-  saveToDos();
+  
 }
 
 function saveToDos(){
