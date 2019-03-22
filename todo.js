@@ -25,21 +25,21 @@ function saveToDos() {
 function paintToDo(text, text2) {
   const newId = toDos.length + 1;
   const li = document.createElement("li");
-  const doneBtn = document.createElement("input");
-  doneBtn.type = "checkbox";
-  doneBtn.id = newId;
+  const doneChk = document.createElement("input");
+  doneChk.type = "checkbox";
+  doneChk.id = `${newId}chkBox`;
   const task = text2; 
   const label = document.createElement("label");
   label.setAttribute("for", "doneCheckBox");
 
   const delBtn = document.createElement("button");
 
-  doneBtn.addEventListener("change", doneToDo);
+  doneChk.addEventListener("change", doneToDo);
   delBtn.innerText = "X";
   delBtn.addEventListener("click", deleteToDo);
   label.innerText = text;
 
-  li.appendChild(doneBtn);
+  li.appendChild(doneChk);
   li.appendChild(label);
   li.appendChild(delBtn);
 
@@ -53,14 +53,11 @@ function paintToDo(text, text2) {
   };
   
   if(toDoObj.class == "off"){
-    loadDoneTodo();
+    label.classList.add("toDoDone");
+    doneChk.checked=true;
   }
   toDos.push(toDoObj);
   saveToDos();
-
-  function loadDoneTodo(){
-    label.classList.add("toDoDone");
-  }
 
   function doneToDo(event) {
     const checkBox = event.target;
@@ -70,6 +67,7 @@ function paintToDo(text, text2) {
       labelText.classList.add("toDoDone")
       toDoObj.class = "off";
       toDos.splice(newId-1,1,toDoObj);
+      
     } else {
       labelText.classList.remove("toDoDone")
       toDoObj.class = "on"
