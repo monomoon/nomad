@@ -72,9 +72,7 @@ function paintToDo(text, text2) {
       labelText.classList.remove("toDoDone")
       toDoObj.class = "on"
       toDos.splice(newId-1,1,toDoObj);
-    };
-    
-    
+    }; 
     saveToDos();
   }
 }
@@ -83,7 +81,6 @@ function handleSubmit(event) {
   event.preventDefault();
   const currentValue = toDoInput.value;
   if (currentValue == "") {
-
   } else {
     paintToDo(currentValue);
   }
@@ -107,4 +104,5 @@ function init() {
   loadToDos();
   toDoForm.addEventListener("submit", handleSubmit);
 }
+
 init();

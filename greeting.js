@@ -1,6 +1,7 @@
 //로컬저장소에 currentUser 값이 있는가?
 // 있으면 form창은 가리고 h4는 보이면서 hello user 메세지가 나오도록
-// 없으면 form창을 보여주고 값을 입력// 입력 받은 값은 localStorage.setItem("currentUser", 입력값)로 설정.
+// 없으면 form창을 보여주고 값을 입력
+// 입력 받은 값은 localStorage.setItem("currentUser", 입력값)로 설정.
 
 const form = document.querySelector(".js-form"),  // form 태그 전체
     input = form.querySelector("input"), //form 태그의 what is your name 있는 텍스트 입력창
@@ -37,6 +38,8 @@ function paintGreeting(text) { // loadName에서 currentUser가 있다면.. css 
         greeting.innerText = `Good afternoon ${text}`;
     }else if(hours >=18 && hours <= 24){
         greeting.innerText = `Good night ${text}`;
+    }else{
+        greeting.innerText = `Hello ${text}`;
     }
 }
 
@@ -53,6 +56,5 @@ function loadName() { // 로컬저장소에 currentUser가 있는지 파악하�
 function init() {
     loadName(); // 페이지가 열리면 로드네임을 실행
 }
-
 
 init();

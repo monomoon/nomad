@@ -46,13 +46,6 @@ h1 {
   flex-direction: column;
   align-items: center;
   margin: 20px;
-
-
-}
-
-.form,
-.greetings {
-  display: none;
 }
 
 .js-form input,
@@ -66,14 +59,22 @@ h1 {
 
 }
 
-.clicked {
-  color: #7f8c8d;
+.form,
+.greetings {
+  display: none;
 }
 
 .showing {
   display: flex;
   justify-content: center;
 }
+
+
+.clicked {
+  color: #7f8c8d;
+}
+
+
 
 .toDoDone {
   color: #808080;

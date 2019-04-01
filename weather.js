@@ -47,7 +47,7 @@ function saveCoords(coordsObj){
 }
 
 //위도,경도 가져오기
-function handleGeoSucces(position){ 
+function handleGeoSuccess(position){ 
     const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
     const coordsObj = {
@@ -66,7 +66,7 @@ function handleGeoError(){
 
 //위치 정보 요청해서 가져오기
 function askForCoords(){
-    navigator.geolocation.getCurrentPosition(handleGeoSucces, handleGeoError)
+    navigator.geolocation.getCurrentPosition(handleGeoSuccess, handleGeoError)
 }
 
 //위치정보 소유 체크
